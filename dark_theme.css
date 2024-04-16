@@ -1,0 +1,15 @@
+body{
+    background-color: black;
+}
+.para{
+    color: white;
+}
+
+.column{
+    border-color: red;
+}
+#manipulate{
+    color: white;
+    background-color: green;
+    font-size: 20px;
+}
