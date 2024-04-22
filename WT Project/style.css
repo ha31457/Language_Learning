@@ -1,10 +1,43 @@
 @keyframes fadeIn {
     0% { opacity: 0; }
-    100% { opacity: 1; }
+    100% { opacity: Q 1; }
   }  
 
-.fade-in-image { animation: fadeIn 5s; }
+.fade-in-image { 
+  animation: fadeIn 5s; 
+  visibility: visible;
+  text-align: center;
+}
 
 body{
     padding: 30px;
+    background-color: black;
+}
+
+li{
+  font-size: 25px; 
+  color: white;
+}
+
+h1{
+  font-size: 35px;
+  color: yellow;
+  text-decoration: underline;
+  font-weight: bold;
+  
+}
+
+p{
+  font-size: 25px;
+  color: white;
+}
+
+h2{
+  font-size: 25px;
+  color: white;
+}
+
+td{
+  font-size: 25px;
+  padding: 25px;
 }
