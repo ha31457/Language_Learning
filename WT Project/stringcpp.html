@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Learn strings in C++ </title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <h1> Strings in C++ </h1>
+    <p> C++ strings are sequences of characters stored in a char array. Strings are used to store words and text. They are also used to store data, such as numbers and other types of information. Strings in C++ can be defined either using the std::string class or the C-style character arrays. </p>
+    <div class="fade-in-image">
+        <img src="string.png">
+    </div>
+    <h1> Ways to Define a String in C++ </h1>
+    <p> Strings can be defined in several ways in C++. Strings can be accessed from the standard library using the string class. Character arrays can also be used to define strings. String provides a rich set of features, such as searching and manipulating, which are commonly used methods. Despite being less advanced than the string class, this method is still widely used, as it is more efficient and easier to use. Ways to define a string in C++ are: </p>
+    <ul> 
+        <li> Using String keyword </li>
+        <li> Using C-style strings </li>
+    </ul>
+    <h1> 1. Using string keyword </h1>
+    <p> It is more convenient to define a string with the string keyword instead of using the array keyword because it is easy to write and understand. </p>
+    <h2> Syntax : </h2>
+    <h3> string s = "Harsh D. Pandya"; </h3>
+    <h3> string str("Harsh S. Patel"); </h3>
+    <h1> 2. Using C-style Strings </h1>
+    <p> Using C-style string libraries functions such as strcpy(), strcmp(), and strcat() to define strings. This method is more complex and not as widely used as the other two, but it can be useful when dealing with legacy code or when you need performance. </p>
+    <h2> Syntax : </h2>
+    <h3> char s[ ] = {'H', 'D', 'P','\0'}; </h3>
+    <h3> char s[4] = {'H', 'S', 'P', '\0'}; </h3>
+    <h3> char s[ ] = "HDP"; </h3>
+    <h3> char s[4] = "HDP"; </h3>
+
+    <h1> How to take sring input in C++? </h1>
+    <p> String input means accepting a string from a user. In C++. We have different types of taking input from the user which depend on the string. The most common way is to take input with cin keyword with the extraction operator (>>) in C++. Methods to take a string as input are: </p>
+    <ul>
+        <li> cin </li>
+        <li> getline </li>
+        <li> stringstream </li>
+    </ul>
+    <h2> 1. Using cin </h2>
+    <p> The simplest way to take input is to use the cin command along with the stream extraction operator (>>) </p>
+    <h2> Syntax : </h2>
+    <h3> cin>>s; </h3>
+    <br>
+    <h2> 2. using getline </h2>
+    <p> The getline() function in c++ is used to read a string from an input stream. It is declared in the string header file. </p>
+    <h2> Syntax : </h2>
+    <h3> getline(cin,s); </h3>
+    <br>
+    <h2> 3. using stringstream </h2>
+    <p> The stringstream class in C++ is used to take multiple strings as input at once.  </p>
+    <h2> Syntax : </h2>
+    <h3> stringstream stringstream_object(string_name); </h3>
+</body>
+</html>

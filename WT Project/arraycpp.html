@@ -12,5 +12,36 @@
     <div class="fade-in-image">
         <img src="Arrays-in-C.png">
     </div>
+    <h1> Properties of Arrays in C++ </h1>
+    <uL>
+        <li> An Array is a collection of data of the same data type, stored at a contiguous memory location. </li>
+        <li> Indexing of an array starts from 0. It means the first element is stored at the 0th index, the second at 1st, and so on. </li>
+        <li> Elements of an array can be accessed using their indices. </li>
+        <li> Once an array is declared its size remains constant throughout the program. </li>
+        <li> An array can have multiple dimensions. </li>
+        <li> The number of elements in an array can be determined using the sizeof operator. </li>
+        <li> We can find the size of the type of elements stored in an array by subtracting adjacent addresses. </li>
+    </uL>
+    <h1> Array Declaration in C++ </h1> 
+    <p> In C++, we can declare an array by simply specifying the data type first and then the name of an array with its size. </p>
+    <h3> Syntax : data_type array_name[Size_of_array]; </h3>
+    <h3> Example : int arr[5]; </h3>
+    <h3> Here </h3>
+    <ul> 
+        <li> <b>int:</b> It is the type of data to be stored in the array. We can also use other data types such as char, float, and double.</li>
+        <li> <b>arr:</b> It is the name of the array.</li>
+        <li> <b> 5: </b> It is the size of the array which means only 5 elements can be stored in the array. </li>
+    </ul>
+    <div class="fade-in-image">
+        <img src="arrayinit.png">
+    </div>
+    <h1> Initialization of Array in C++ </h1>  
+    <p> In C++, we can initialize an array in many ways but we will discuss some most common ways to initialize an array. We can initialize an array at the time of declaration or after declaration. </p>
+    <ol>
+        <li>  Initialize Array with Values in C++ </br> We have initialized the array with values. The values enclosed in curly braces ‘{}’ are assigned to the array. Here, 1 is stored in arr[0], 2 in arr[1], and so on. Here the size of the array is 5. </br> </br>int arr[5] = {1, 2, 3, 4, 5};</li></br>
+        <li> Initialize Array with Values and without Size in C++ </br> We have initialized the array with values but we have not declared the length of the array, therefore, the length of an array is equal to the number of elements inside curly braces. </br> </br>int arr[] = {1, 2, 3, 4, 5};</li></br>
+        <li> Initialize Array after Declaration (Using Loops) </br> We have initialized the array using a loop after declaring the array. This method is generally used when we want to take input from the user or we cant to assign elements one by one to each index of the array. We can modify the loop conditions or change the initialization values according to requirements. </br> </br> for (int i = 0; i < N; i++) { </br>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; arr[i] = value;</br>} </li></br>
+    </ol>
+    
 </body>
 </html>
