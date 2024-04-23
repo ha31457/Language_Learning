@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main_style.css">
+    <link rel="stylesheet" href="dark_theme.css" id="theme">
+    <script>
+        questionNumbers = new Array(15);
+        answers = new Array(15);
+        for (let i = 0; i < questionNumbers.length; i++) {
+            questionNumbers[i] = i + 1;
+        }
+        answers[0] = 1;
+        answers[1] = 2;
+        answers[2] = 1;
+        answers[3] = 3;
+        answers[4] = 2;
+        function evaluateMarks() {
+            score = 0
+            let radiobtns = document.querySelectorAll("input[type=radio]");
+            radiobtns.forEach(btn => {
+                let value = btn.value;
+                let name = btn.name;
+
+                for (let i = 0; i < questionNumbers.length; i++) {
+                    console.log(questionNumbers[i]);
+                    if (name == questionNumbers[i] && value == answers[i] && btn.checked) {
+                        score += 1;
+                    }
+                }
+
+                // if(name == 1 && value == 2 && btn.checked){
+                //     score += 1;
+                // }
+                // if(name == 2 && value == 4 && btn.checked){
+                //     score += 1;
+                // }
+            });
+            document.write(score);
+        }
+
+    </script>
+    <script src="script.js"></script>
+    <title>Quiz</title>
+</head>
+
+<body>
+    <button id="manipulate">Turn White</button>
+    <h1 class="txt">Quick Quiz on C++ Functions</h1>
+    <hr size="10" class="seperator" , noshade="">
+    <br><br><br>
+    <div>
+        <form action="" onsubmit="evaluateMarks()">
+            <h3 class="txt">1. What are  mandatory parts in the function declaration in C++?</h3>
+            <input type="radio" name="1" value="1"><label class="txt">return type, function name</label> <br>
+            <input type="radio" name="1" value="2"><label class="txt">return type, function name, parameters</label> <br>
+            <input type="radio" name="1" value="3"><label class="txt">parameters, function name</label> <br>
+            <input type="radio" name="1" value="4"><label class="txt">parameters, variables</label>
+
+
+            <br><br><br>
+            <h3 class="txt">2. Which is more effective while calling the functions in C++?</h3>
+            <input type="radio" name="2" value="1"><label class="txt">call by value</label> <br>
+            <input type="radio" name="2" value="2"><label class="txt">call by reference</label> <br>
+            <input type="radio" name="2" value="3"><label class="txt">call by pointer</label> <br>
+            <input type="radio" name="2" value="4"><label class="txt">call by object</label> 
+
+            <br><br><br>
+            <h3 class="txt">3. Which of the following is the default return value of functions in C++?</h3>
+            <input type="radio" name="3" value="1"><label class="txt">int</label> <br>
+            <input type="radio" name="3" value="2"><label class="txt">char</label> <br>
+            <input type="radio" name="3" value="3"><label class="txt">float</label> <br>
+            <input type="radio" name="3" value="4"><label class="txt">void</label>
+
+            <br><br><br>
+            <h3 class="txt">4. What happens to a function defined inside a class without any complex operations (like looping, a large number of lines, etc.) in C++?</h3>
+            <input type="radio" name="4" value="1"><label class="txt">It becomes a virtual function of the class</label> <br>
+            <input type="radio" name="4" value="2"><label class="txt">It becomes a default calling function of the class</label> <br>
+            <input type="radio" name="4" value="3"><label class="txt">It becomes an inline function of the class</label> <br>
+            <input type="radio" name="4" value="4"><label class="txt">The program gives an error</label>
+
+            <br><br><br>
+            <h3 class="txt">5. When we define tbe default values for a function in C++?</h3>
+            <input type="radio" name="5" value="1"><label class="txt">When a function is defined </label><br>
+            <input type="radio" name="5" value="2"><label class="txt">When a function is declared </label><br>
+            <input type="radio" name="5" value="3"><label class="txt">When the scope of the function is over</label><br>
+            <input type="radio" name="5" value="4"><label class="txt">When a function is called</label>
+
+
+            <br><br><br>
+            <input type="submit" value="Submit" id="finish">
+        </form>
+
+    </div>
+</body>
+
+</html>
