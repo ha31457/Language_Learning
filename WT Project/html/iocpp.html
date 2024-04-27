@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Input Output in C++ </title>
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+   <h1> Input Output in C++ </h1> 
+   <p>
+    C++ comes with libraries that provide us with many ways for performing input and output. In C++ input and output are performed in the form of a sequence of bytes or more commonly known as streams.
+   </p>
+   <ul> 
+    <li> <b> Input Stream: </b>If the direction of flow of bytes is from the device(for example, Keyboard) to the main memory then this process is called input. </li>
+    <li> <b> Output Stream: </b>  If the direction of flow of bytes is opposite, i.e. from main memory to device( display screen ) then this process is called output. </li>
+   </ul>
+   <div class="fade-in-image">
+    <img src="../images/CPPIO.png">
+   </div>
+   <h2>Header files available in C++ for Input/Output operations are: </h2>
+   <ol>
+    <li> <b> iostream </b> iosream stands for standard input-output stream. This header file contains definations of objects like cin, cout, cerr, etc.</li>
+    <li> <b> iomanip </b> iomanip stands for input-output manipulators. The methods declared in these files are used for manipulating streams. This file contains definations of setw, setprecesion, etc.</li>
+    <li><b>fstream </b>  This header file mainly describes the file stream. This header file is used to handle the data being read from a file as input or data being written into the file as output.</li>
+    <li><b> bits/stdc++ </b> This header file includes every standard library. In programming contests, using this file is a good idea, when you want to reduce the time wasted in doing chores; especially when your rank is time sensitive </li>
+   </ol>
+
+   <p> In C++ after the header files, we often use ‘using namespace std;‘. The reason behind it is that all of the standard library definitions are inside the namespace std. As the library functions are not defined at global scope, so in order to use them we use namespace std. So, that we don’t need to write STD:: at every line (eg. STD::cout etc.). </p>
+    </br>
+    <p> The two instances cout in C++ and cin in C++ of iostream class are used very often for printing outputs and taking inputs respectively. These two are the most basic methods of taking input and printing output in C++. To use cin and cout in C++ one must include the header file iostream in the program </p>
+    <p>This article mainly discusses the objects defined in the header file iostream like the cin and cout. </p>
+    <ul>
+        <li>Standard output stream (cout): Usually the standard output device is the display screen. The C++ cout statement is the instance of the ostream class. It is used to produce output on the standard output device which is usually the display screen. The data needed to be displayed on the screen is inserted in the standard output stream (cout) using the insertion operator(<<).</li>
+        <li>standard input stream (cin): Usually the input device in a computer is the keyboard. C++ cin statement is the instance of the class istream and is used to read input from the standard input device which is usually a keyboard. 
+        The extraction operator(>>) is used along with the object cin for readinginputs. The extraction operator extracts the data from the object cin whichis entered using the keyboard</li>
+    </ul>
+</body>
+</html>
