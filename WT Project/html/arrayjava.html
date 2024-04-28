@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> arrays in Java </title>
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <h1> Arrays in Java </h1>
+    <p>In Java, Array is a group of like-typed variables referred to by a common name. Arrays in Java work differently than they do in C/C++. Following are some important points about Java arrays.</p>
+    <h2> Arrays in Java </h2>
+    <ul>
+        <li>In Java, all arrays are dynamically allocated. </li>
+        <li>Arrays may be stored in contiguous memory [consecutive memory locations].</li>
+        <li>Since arrays are objects in Java, we can find their length using the object property length. This is different from C/C++, where we find length using sizeof.</li>
+        <li>A Java array variable can also be declared like other variables with [] after the data type.</li>
+        <li>The variables in the array are ordered, and each has an index beginning with 0.</li>
+        <li>Java array can also be used as a static field, a local variable, or a method parameter.</li>
+    </ul>
+    <div class="fade-in-image">
+        <img src="../images/arrayjava.png">
+    </div>
+    <h2> Creating, Initializing and Accessing an Array</h2>
+    <h3> One-dimmensional array </h3>
+    <p>The general form of a One-dimmensional array declaration is : </br> --type var-name[]; </br> --type[] var-name;</p>
+    <p>An array declaration has two components: the type and the name. type declares the element type of the array. The element type determines the data type of each element that comprises the array. Like an array of integers, we can also create an array of other primitive data types like char, float, double, etc., or user-defined data types (objects of a class). Thus, the element type for the array determines what type of data the array will hold.</p>
+    <h2> Array literal in Java </h2>
+    <p> In a situation where the size of the array and variables of the array are already known, array literals can be used.</p>
+    <ul>
+        <li>The length of this array determines the length of the created array.</li>
+        <li>There is no need to write the new int[] part in the latest versions of Java</li>
+    </ul>
+    <h2> Accessing Java array elements using for loop</h2>
+    <p>Each element in the array is accessed via its index. The index begins with 0 and ends at (total array size)-1. All the elements of array can be accessed using Java for Loop.</p>
+    <h2>Multidimensional arrays in Java </h2>
+    <p> Multidimensional arrays are arrays of arrays with each element of the array holding the reference of other arrays. These are also known as Jagged Arrays. A multidimensional array is created by appending one set of square brackets ([]) per dimension. </p>
+    <h3> Syntax of Java multidimensional array </h3>
+    <p> There are 2 methods to declare Java Multidimensional Arrays as mentioned below: </br> --datatype [][] arrayrefvariable;</br>--datatype arrayrefvariable[][];</p>
+
+</body>
+</html>
