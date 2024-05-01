@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Learn strings in java </title>
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <h1> Strings in Java </h1>
+    <p>In the given example only one object will be created. Firstly JVM will not find any string object with the value “Welcome” in the string constant pool, so it will create a new object. After that it will find the string with the value “Welcome” in the pool, it will not create a new object but will return the reference to the same instance. In this article, we will learn about Java Strings.</p>
+    <h2> What are strings in java? </h2>
+    <p>Strings are the type of objects that can store the character of values and in Java, every character is stored in 16 bits i,e using UTF 16-bit encoding. A string acts the same as an array of characters in Java.</p>
+    <h4> example : String name = "Geeks"; </h4>
+    <div class="fade-in-image">
+        <img src="../images/string_java.png">
+    </div>
+    <h3> Ways of creating string </h3>
+    <h5> There are two ways to create a string in Java: </h5>
+    <ul>
+        <li> String Literal </li>
+        <li> Using new keyword </li>
+    </ul>
+    <h3> 1. String Literal </h3>
+    <p>To make Java more memory efficient (because no new objects are created if it exists already in the string constant pool).</p>
+    <h3> 2. Using new keyword </h3>
+    <ul>
+        <li>String s = new String(“Welcome”);</li>
+        <li>In such a case, JVM will create a new string object in normal (non-pool) heap memory and the literal “Welcome” will be placed in the string constant pool. The variable s will refer to the object in the heap (non-pool)</li>
+    </ul>
+    
+</body>
+</html>
