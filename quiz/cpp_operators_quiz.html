@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main_style.css">
+    <link rel="stylesheet" href="dark_theme.css" id="theme">
+    <script>
+        questionNumbers = new Array(15);
+        answers = new Array(15);
+        for (let i = 0; i < questionNumbers.length; i++) {
+            questionNumbers[i] = i + 1;
+        }
+        answers[0] = 3;
+        answers[1] = 2;
+        answers[2] = 1;
+        answers[3] = 2;
+        answers[4] = 3;
+        function evaluateMarks() {
+            score = 0
+            let radiobtns = document.querySelectorAll("input[type=radio]");
+            radiobtns.forEach(btn => {
+                let value = btn.value;
+                let name = btn.name;
+
+                for (let i = 0; i < questionNumbers.length; i++) {
+                    console.log(questionNumbers[i]);
+                    if (name == questionNumbers[i] && value == answers[i] && btn.checked) {
+                        score += 1;
+                    }
+                }
+
+                // if(name == 1 && value == 2 && btn.checked){
+                //     score += 1;
+                // }
+                // if(name == 2 && value == 4 && btn.checked){
+                //     score += 1;
+                // }
+            });
+            document.write(score);
+        }
+
+    </script>
+    <script src="script.js"></script>
+    <title>C++ Arrays Quiz</title>
+</head>
+
+<body>
+    <button id="manipulate">Turn White</button>
+    <h1 class="txt">Quick Quiz on C++ Operators</h1>
+    <hr size="10" class="seperator" , noshade="">
+    <br><br><br>
+    <div>
+        <form action="" onsubmit="evaluateMarks()">
+            <h3 class="txt">1. Which is not an operator in C++?</h3>
+            <input type="radio" name="1" value="1"><label class="txt">logical AND (&&)</label> <br>
+            <input type="radio" name="1" value="2"><label class="txt">increment/decrement (++/--)</label> <br>
+            <input type="radio" name="1" value="3"><label class="txt">exponential (**)</label> <br>
+            <input type="radio" name="1" value="4"><label class="txt">modulus (%)</label>
+
+
+            <br><br><br>
+            <h3 class="txt">2. Which of the following operators returns a Boolean Value (true or false) in C++?</h3>
+            <input type="radio" name="2" value="1"><label class="txt">Arithmatic Operators</label> <br>
+            <input type="radio" name="2" value="2"><label class="txt">Relational Operators</label> <br>
+            <input type="radio" name="2" value="3"><label class="txt">Logical Operators</label> <br>
+            <input type="radio" name="2" value="4"><label class="txt">Bitwise Operators</label>
+
+            <br><br><br>
+            <h3 class="txt">3. Which is the correct syntax for ternary operator in C++?</h3>
+            <input type="radio" name="3" value="1"><label class="txt">Expression1? Expression2: Expression3</label> <br>
+            <input type="radio" name="3" value="2"><label class="txt">? Expression1, Expression2: Expression3</label> <br>
+            <input type="radio" name="3" value="3"><label class="txt">?(Expression1, Expression2, Expression3)</label> <br>
+            <input type="radio" name="3" value="4"><label class="txt">Expression2: Expression3 ? Expression1 </label>
+
+            <br><br><br>
+            <h3 class="txt">4. Which of the following operators are used to combine two or more conditions in C++?</h3>
+            <input type="radio" name="4" value="1"><label class="txt">Relational Operators</label> <br>
+            <input type="radio" name="4" value="2"><label class="txt">Logical Operators</label> <br>
+            <input type="radio" name="4" value="3"><label class="txt">Assignment Operator</label> <br>
+            <input type="radio" name="4" value="4"><label class="txt">Ternary Operator</label>
+
+            <br><br><br>Mathematical operations can be processed faster at which level?</h3>
+            <input type="radio" name="5" value="1"><label class="txt">Byte Level</label><br>
+            <input type="radio" name="5" value="2"><label class="txt">Assembly Level</label><br>
+            <input type="radio" name="5" value="3"><label class="txt">Bit Level</label><br>
+            <input type="radio" name="5" value="4"><label class="txt">None of the above</label>
+
+
+            <br><br><br>
+            <input type="submit" value="Submit" id="finish">
+        </form>
+
+    </div>
+</body>
+
+</html>

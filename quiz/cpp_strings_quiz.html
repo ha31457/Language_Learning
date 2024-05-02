@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main_style.css">
+    <link rel="stylesheet" href="dark_theme.css" id="theme">
+    <script>
+        questionNumbers = new Array(15);
+        answers = new Array(15);
+        for (let i = 0; i < questionNumbers.length; i++) {
+            questionNumbers[i] = i + 1;
+        }
+        answers[0] = 3;
+        answers[1] = 4;
+        answers[2] = 1;
+        answers[3] = 2;
+        answers[4] = 2;
+        function evaluateMarks() {
+            score = 0
+            let radiobtns = document.querySelectorAll("input[type=radio]");
+            radiobtns.forEach(btn => {
+                let value = btn.value;
+                let name = btn.name;
+
+                for (let i = 0; i < questionNumbers.length; i++) {
+                    console.log(questionNumbers[i]);
+                    if (name == questionNumbers[i] && value == answers[i] && btn.checked) {
+                        score += 1;
+                    }
+                }
+
+                // if(name == 1 && value == 2 && btn.checked){
+                //     score += 1;
+                // }
+                // if(name == 2 && value == 4 && btn.checked){
+                //     score += 1;
+                // }
+            });
+            document.write(score);
+        }
+
+    </script>
+    <script src="script.js"></script>
+    <title>C++ Arrays Quiz</title>
+</head>
+
+<body>
+    <button id="manipulate">Turn White</button>
+    <h1 class="txt">Quick Quiz on C++ Strings</h1>
+    <hr size="10" class="seperator" , noshade="">
+    <br><br><br>
+    <div>
+        <form action="" onsubmit="evaluateMarks()">
+            <h3 class="txt">1. How can strings be defined in C++?</h3>
+            <input type="radio" name="1" value="1"><label class="txt">std::string class</label> <br>
+            <input type="radio" name="1" value="2"><label class="txt">C-style character arrays</label> <br>
+            <input type="radio" name="1" value="3"><label class="txt">Both (A) and (B)</label> <br>
+            <input type="radio" name="1" value="4"><label class="txt">None of the above</label>
+
+
+            <br><br><br>
+            <h3 class="txt">2. Which is a valid method to take a string as input in C++?</h3>
+            <input type="radio" name="2" value="1"><label class="txt">cin</label> <br>
+            <input type="radio" name="2" value="2"><label class="txt">getline</label> <br>
+            <input type="radio" name="2" value="3"><label class="txt">stringstream</label> <br>
+            <input type="radio" name="2" value="4"><label class="txt">All of the above</label>
+
+            <br><br><br>
+            <h3 class="txt">3. Which of the following is the correct syntax to define a string in C++?</h3>
+            <input type="radio" name="3" value="1"><label class="txt">char s[] = "HDP";</label> <br>
+            <input type="radio" name="3" value="2"><label class="txt">char s[] = 'HDP';</label> <br>
+            <input type="radio" name="3" value="3"><label class="txt">char s[] = HDP</label> <br>
+            <input type="radio" name="3" value="4"><label class="txt">char s = "HDP"</label>
+
+            <br><br><br>
+            <h3 class="txt">4. What is the '>>' called in C++ in context to strings?</h3>
+            <input type="radio" name="4" value="1"><label class="txt">string extraction operator</label> <br>
+            <input type="radio" name="4" value="2"><label class="txt">stream extraction operator</label> <br>
+            <input type="radio" name="4" value="3"><label class="txt">stream extraction mode</label> <br>
+            <input type="radio" name="4" value="4"><label class="txt">string extraction operator</label>
+
+            <br><br><br>
+            <h3 class="txt">5. Which of the following is used to take multiple strings input at once in C++?</h3>
+            <input type="radio" name="5" value="1"><label class="txt">getline() function</label><br>
+            <input type="radio" name="5" value="2"><label class="txt">stringstream class</label><br>
+            <input type="radio" name="5" value="3"><label class="txt">cin >> s</label><br>
+            <input type="radio" name="5" value="4"><label class="txt">None of the above</label>
+
+
+            <br><br><br>
+            <input type="submit" value="Submit" id="finish">
+        </form>
+
+    </div>
+</body>
+
+</html>
