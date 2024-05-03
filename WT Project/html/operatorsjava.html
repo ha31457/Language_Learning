@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Operators in Java </title>
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
+</head>
+<body>
+    <h1> Operators in Java </h1>
+    <p>Java provides many types of operators which can be used according to the need. They are classified based on the functionality they provide. In this article, we will learn about Java Operators and learn all their types.</p>
+    <h2> What are the Java operators?</h2>
+    <p>Operators in Java are the symbols used for performing specific operations in Java. Operators make tasks like addition, multiplication, etc which look easy although the implementation of these tasks is quite complex</p>
+    <div class="fade-in-image">
+        <img src="../images/operators_java.png" height="450" width="1000">
+    </div>
+    <h2> Types of operators in Java </h2>
+    <h4>There are multiple types of operators in Java. All are mentioned below:</h4>
+    <ol>
+        <li>Arithmetic Operators</li>
+        <li>Unary Operators</li>
+        <li>Assignment Operator</li>
+        <li>Relational Operators</li>
+        <li>Logical Operators</li>
+        <li>Ternary Operator</li>
+        <li>Bitwise Operators</li>
+        <li>Shift Operators</li>
+        <li>instance of operator</li>
+    </ol>
+    <h3>Let's understand about each </h3>
+    <ol>
+        <li>Arithmetic Operators</li>
+        <p>They are used to perform simple arithmetic operations on primitive data types. </p>
+        <ul style="list-style-type:square">
+            <li>*: Multiplication</li>
+            <li>/ : Division</li>
+            <li>% : Modulo</li>
+            <li>+ : Addition</li>
+            <li>- : Subtraction</li>
+        </ul></br>
+        <li>Unary Operators</li>
+        <p>Unary operators need only one operand. They are used to increment, decrement, or negate a value. </p>
+        <ul style="list-style-type:square">
+            <li>- : Unary minus</li>
+            <li>+ : Unary plus</li>
+            <li>++ : Increment operator</li>
+            <li>--  : Decrement operator</li>
+            <li>! : Logical not operator</li>
+        </ul>
+        <li> Assignment Operator</li>
+        <p> '=' Assignment operator is used to assign a value to any variable. It has right-to-left associativity, i.e. value given on the right-hand side of the operator is assigned to the variable on the left, and therefore right-hand side value must be declared before using it or should be a constant.</p>
+        <ul style="list-style-type:square">
+            <li>+=, for adding the left operand with the right operand and then assigning it to the variable on the left</li>
+            <li>-=, for subtracting the right operand from the left operand and then assigning it to the variable on the left</li>
+            <li>*=, for multiplying the left operand with the right operand and then assigning it to the variable on the left.</li>
+            <li>/=, for dividing the left operand by the right operand and then assigning it to the variable on the left.</li>
+            <li>%=, for assigning the modulo of the left operand by the right operand and then assigning it to the variable on the left.</li>
+        </ul>
+        <li> Relational Operators</li>
+        <p>These operators are used to check for relations like equality, greater than, and less than. They return boolean results after the comparison and are extensively used in looping statements as well as conditional if-else statements. </br> Some of the relational operators are- </p>
+        <ul style="list-style-type:square">
+            <li>==, Equal to returns true if the left-hand side is equal to the right-hand side</li>
+            <li>!=, Not Equal to returns true if the left-hand side is not equal to the right-hand side</li>
+            <li><, less than: returns true if the left-hand side is less than the right-hand side</li>
+            <li><=, less than or equal to returns true if the left-hand side is less than or equal to the right-hand side.</li>
+            <li>>, Greater than: returns true if the left-hand side is greater than the right-hand side.</li>
+            <li>>=, Greater than or equal to returns true if the left-hand side is greater than or equal to the right-hand side.</li>
+        </ul>
+        <li> Logical Operators</li>
+        <p>These operators are used to perform “logical AND” and “logical OR” operations, i.e., a function similar to AND gate and OR gate in digital electronics. One thing to keep in mind is the second condition is not evaluated if the first one is false, i.e., it has a short-circuiting effect. Used extensively to test for several conditions for making a decision. Java also has “Logical NOT”, which returns true when the condition is false and vice-versa </br> Conditional operators are : </p>
+        <ul style="list-style-type:square">
+            <li>&&, Logical AND: returns true when both conditions are true.</li>
+            <li>||, Logical OR: returns true if at least one condition is true.</li>
+            <li>!, Logical NOT: returns true when a condition is false and vice-versa</li>
+        </ul>
+        <li>Ternary Operator</li>
+        <p>The ternary operator is a shorthand version of the if-else statement. It has three operands and hence the name Ternary. <br/>The general format is: <br/> condition ? if true : if false <br/> The above statement means that if the condition evaluates to true,then execute the statements after the ‘?’ else execute the statements after the ':'.</p>
+        <li> Bitwise Operators </li>
+        <p>These operators are used to perform the manipulation of individual bits of a number. They can be used with any of the integer types. They are used when performing update and query operations of the Binary indexed trees. </p>
+        <ul style="list-style-type:square">
+            <li>&, Bitwise AND operator: returns bit by bit AND of input values.</li>
+            <li>|, Bitwise OR operator: returns bit by bit OR of input values.</li>
+            <li>^, Bitwise XOR operator: returns bit-by-bit XOR of input values</li>
+            <li>~, Bitwise Complement Operator: This is a unary operator which returns the one’s complement representation of the input value, i.e., with all bits inverted.</li>
+        </ul>
+        <li> Shift Operators</li>
+        <p>These operators are used to shift the bits of a number left or right, thereby multiplying or dividing the number by two, respectively. They can be used when we have to multiply or divide a number by two. </p>
+        <ul style="list-style-type:square;">
+            <li><<, Left shift operator: shifts the bits of the number to the left and fills 0 on voids left as a result. Similar effect as multiplying the number with some power of two.</li>
+            <li>>>, Signed Right shift operator: shifts the bits of the number to the right and fills 0 on voids left as a result. The leftmost bit depends on the sign of the initial number. Similar effect to dividing the number with some power of two.</li>
+            <li>>>>, Unsigned Right shift operator: shifts the bits of the number to the right and fills 0 on voids left as a result. The leftmost bit is set to 0.</li>
+        </ul>
+        <li> instanceof operator</li>
+        <p>The instance of the operator is used for type checking. It can be used to test if an object is an instance of a class, a subclass, or an interface.</p>
+    </ol>
+    <h2>Now let us see the associativity of each of the operator by reffering to the below given image</h2>
+    <div class="fade-in-image">
+        <img src="../images/operator_presedence.png">
+    </div>
+    <h2>Advantages of Operators in Java </h2>
+    <p>The Advantages of using operators in Java are mentioned below: </p>
+    <ul>
+        <li>Expressiveness: Operators in Java provide a concise and readable way to perform complex calculations and logical operations.</li>
+        <li>Time-Saving: Operators in Java save time by reducing the amount of code required to perform certain tasks.</li>
+        <li>Improved Performance: Using operators can improve performance because they are often implemented at the hardware level, making them faster than equivalent Java code.</li>
+    </ul><br/>
+    <h2> Disadvantages of Operators in Java </h2>
+    <p>The disadvantages of operators in java are mentioned below:</p>
+    <ul>
+        <li>Operator Precedence: Operators in Java have a defined precedence, which can lead to unexpected results if not used properly.</li>
+        <li>Type Coercion: Java performs implicit type conversions when using operators, which can lead to unexpected results or errors if not used properly.</li>
+    </ul>
+</body>
+</html>
