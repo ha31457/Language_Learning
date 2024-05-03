@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main_style.css">
+    <link rel="stylesheet" href="dark_theme.css" id="theme">
+    <script>
+        questionNumbers = new Array(5);
+        const answers = [3, 2, 3, 2, 2];
+
+        for (let i = 0; i < questionNumbers.length; i++) {
+            questionNumbers[i] = i + 1;
+        }
+       
+        function evaluateMarks() {
+            score = 0
+            let radiobtns = document.querySelectorAll("input[type=radio]");
+            radiobtns.forEach(btn => {
+                let value = btn.value;
+                let name = btn.name;
+
+                for (let i = 0; i < questionNumbers.length; i++) {
+                    console.log(questionNumbers[i]);
+                    if (name == questionNumbers[i] && value == answers[i] && btn.checked) {
+                        score += 1;
+                    }
+                }
+            });
+            document.write(score);
+        }
+    </script>
+    <script src="script.js"></script>
+    <title>Java Arrays Quiz</title>
+</head>
+
+<body>
+    <button id="manipulate">Turn White</button>
+    <h1 class="txt">Quick Quiz on Java Arrays</h1>
+    <hr size="10" class="seperator" , noshade="">
+    <br><br><br>
+    <div>
+        <form action="" onsubmit="evaluateMarks()">
+            <h3 class="txt">1. How do you declare an array in Java?</h3>
+            <input type="radio" name="1" value="1"><label class="txt">int[] myArray;</label> <br>
+            <input type="radio" name="1" value="2"><label class="txt">myArray[];</label> <br>
+            <input type="radio" name="1" value="3"><label class="txt">int myArray[];</label> <br>
+            <input type="radio" name="1" value="4"><label class="txt">Array myArray;</label>
+
+            <br><br><br>
+            <h3 class="txt">2. How do you initialize an array in Java?</h3>
+            <input type="radio" name="2" value="1"><label class="txt">int[] myArray = new int();</label> <br>
+            <input type="radio" name="2" value="2"><label class="txt">int[] myArray = new int[5];</label> <br>
+            <input type="radio" name="2" value="3"><label class="txt">int myArray = {1, 2, 3};</label> <br>
+            <input type="radio" name="2" value="4"><label class="txt">int myArray[];</label>
+
+            <br><br><br>
+            <h3 class="txt">3. What is the length of an array in Java?</h3>
+            <input type="radio" name="3" value="1"><label class="txt">It is fixed once the array is created.</label> <br>
+            <input type="radio" name="3" value="2"><label class="txt">It can be changed anytime.</label> <br>
+            <input type="radio" name="3" value="3"><label class="txt">It is equal to the number of elements in the array.</label> <br>
+            <input type="radio" name="3" value="4"><label class="txt">It is always zero.</label>
+
+            <br><br><br>
+            <h3 class="txt">4. How do you access the element at index 2 of an array named myArray?</h3>
+            <input type="radio" name="4" value="1"><label class="txt">myArray.get(2);</label> <br>
+            <input type="radio" name="4" value="2"><label class="txt">myArray[2];</label> <br>
+            <input type="radio" name="4" value="3"><label class="txt">myArray[1];</label> <br>
+            <input type="radio" name="4" value="4"><label class="txt">myArray.index(2);</label>
+
+            <br><br><br>
+            <h3 class="txt">5. How do you find the length of an array in Java?</h3>
+            <input type="radio" name="5" value="1"><label class="txt">myArray.size();</label><br>
+            <input type="radio" name="5" value="2"><label class="txt">myArray.length();</label><br>
+            <input type="radio" name="5" value="3"><label class="txt">myArray.size;</label><br>
+            <input type="radio" name="5" value="4"><label class="txt">myArray.length;</label>
+
+            <br><br><br>
+            <input type="submit" value="Submit" id="finish">
+        </form>
+    </div>
+</body>
+
+</html>

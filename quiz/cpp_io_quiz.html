@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main_style.css">
+    <link rel="stylesheet" href="dark_theme.css" id="theme">
+    <script>
+        questionNumbers = new Array(5);
+        const answers = [3, 2, 1, 1, 1];
+        for (let i = 0; i < questionNumbers.length; i++) {
+            questionNumbers[i] = i + 1;
+        }
+        
+        function evaluateMarks() {
+            score = 0
+            let radiobtns = document.querySelectorAll("input[type=radio]");
+            radiobtns.forEach(btn => {
+                let value = btn.value;
+                let name = btn.name;
+
+                for (let i = 0; i < questionNumbers.length; i++) {
+                    console.log(questionNumbers[i]);
+                    if (name == questionNumbers[i] && value == answers[i] && btn.checked) {
+                        score += 1;
+                    }
+                }
+            });
+            document.write(score);
+        }
+    </script>
+    <script src="script.js"></script>
+    <title>C++ Input and Output Quiz</title>
+</head>
+
+<body>
+    <button id="manipulate">Turn White</button>
+    <h1 class="txt">Quick Quiz on C++ Input and Output</h1>
+    <hr size="10" class="seperator" , noshade="">
+    <br><br><br>
+    <div>
+        <form action="" onsubmit="evaluateMarks()">
+            <h3 class="txt">1. Which header file is used for input and output in C++?</h3>
+            <input type="radio" name="1" value="1"><label class="txt">stdio.h</label> <br>
+            <input type="radio" name="1" value="2"><label class="txt">iostream.h</label> <br>
+            <input type="radio" name="1" value="3"><label class="txt">iostream</label> <br>
+            <input type="radio" name="1" value="4"><label class="txt">inputoutput.h</label>
+
+            <br><br><br>
+            <h3 class="txt">2. Which C++ keyword is used to output data to the screen?</h3>
+            <input type="radio" name="2" value="1"><label class="txt">print</label> <br>
+            <input type="radio" name="2" value="2"><label class="txt">cout</label> <br>
+            <input type="radio" name="2" value="3"><label class="txt">display</label> <br>
+            <input type="radio" name="2" value="4"><label class="txt">output</label>
+
+            <br><br><br>
+            <h3 class="txt">3. Which operator is used for input in C++?</h3>
+            <input type="radio" name="3" value="1"><label class="txt"><<</label> <br>
+            <input type="radio" name="3" value="2"><label class="txt">>>></label> <br>
+            <input type="radio" name="3" value="3"><label class="txt">>></label> <br>
+            <input type="radio" name="3" value="4"><label class="txt"><<<</label>
+
+            <br><br><br>
+            <h3 class="txt">4. Which function is used to input data in C++?</h3>
+            <input type="radio" name="4" value="1"><label class="txt">cin</label> <br>
+            <input type="radio" name="4" value="2"><label class="txt">input</label> <br>
+            <input type="radio" name="4" value="3"><label class="txt">scanf</label> <br>
+            <input type="radio" name="4" value="4"><label class="txt">read</label>
+
+            <br><br><br>
+            <h3 class="txt">5. Which stream object is used to output data in C++?</h3>
+            <input type="radio" name="5" value="1"><label class="txt">cout</label><br>
+            <input type="radio" name="5" value="2"><label class="txt">cin</label><br>
+            <input type="radio" name="5" value="3"><label class="txt">stdin</label><br>
+            <input type="radio" name="5" value="4"><label class="txt">stdout</label>
+
+            <br><br><br>
+            <input type="submit" value="Submit" id="finish">
+        </form>
+    </div>
+</body>
+
+</html>
