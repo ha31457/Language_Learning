@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main_style.css">
+    <link rel="stylesheet" href="dark_theme.css" id="theme">
+    <script>
+        questionNumbers = new Array(5);
+        for (let i = 0; i < questionNumbers.length; i++) {
+            questionNumbers[i] = i + 1;
+        }
+        function evaluateMarks() {
+            let score = 0;
+            const answers = [3, 1, 2, 4, 2]; // Array of correct answers
+            let radiobtns = document.querySelectorAll("input[type=radio]");
+            radiobtns.forEach(btn => {
+                let value = btn.value;
+                let name = btn.name;
+
+                for (let i = 0; i < questionNumbers.length; i++) {
+                    if (name == questionNumbers[i] && value == answers[i] && btn.checked) {
+                        score += 1;
+                    }
+                }
+            });
+            document.write(score);
+        }
+    </script>
+    <script src="script.js"></script>
+    <title>Java Input/Output Quiz</title>
+</head>
+<body>
+    <button id="manipulate">Turn White</button>
+    <h1 class="txt">Quick Quiz on Input/Output in Java</h1>
+    <hr size="10" class="seperator" , noshade="">
+    <br><br><br>
+    <div>
+        <form action="" onsubmit="evaluateMarks()">
+            <h3 class="txt">1. Which class is used to read input from the user in Java?</h3>
+            <input type="radio" name="1" value="1"><label class="txt">System.in</label> <br>
+            <input type="radio" name="1" value="2"><label class="txt">Scanner</label> <br>
+            <input type="radio" name="1" value="3"><label class="txt">BufferedReader</label> <br>
+            <input type="radio" name="1" value="4"><label class="txt">PrintStream</label>
+
+            <br><br><br>
+            <h3 class="txt">2. Which method is used to read a string from the user using Scanner class in Java?</h3>
+            <input type="radio" name="2" value="1"><label class="txt">nextLine()</label> <br>
+            <input type="radio" name="2" value="2"><label class="txt">readString()</label> <br>
+            <input type="radio" name="2" value="3"><label class="txt">next()</label> <br>
+            <input type="radio" name="2" value="4"><label class="txt">read()</label>
+
+            <br><br><br>
+            <h3 class="txt">3. Which class is used to write output to the console in Java?</h3>
+            <input type="radio" name="3" value="1"><label class="txt">System.out</label> <br>
+            <input type="radio" name="3" value="2"><label class="txt">PrintWriter</label> <br>
+            <input type="radio" name="3" value="3"><label class="txt">OutputStream</label> <br>
+            <input type="radio" name="3" value="4"><label class="txt">BufferedWriter</label>
+
+            <br><br><br>
+            <h3 class="txt">4. Which method is used to write a string to the console using PrintWriter class in Java?</h3>
+            <input type="radio" name="4" value="1"><label class="txt">printString()</label> <br>
+            <input type="radio" name="4" value="2"><label class="txt">writeString()</label> <br>
+            <input type="radio" name="4" value="3"><label class="txt">write()</label> <br>
+            <input type="radio" name="4" value="4"><label class="txt">print()</label>
+
+            <br><br><br>
+            <h3 class="txt">5. Which class is used to format output in Java?</h3>
+            <input type="radio" name="5" value="1"><label class="txt">PrintWriter</label> <br>
+            <input type="radio" name="5" value="2"><label class="txt">Scanner</label> <br>
+            <input type="radio" name="5" value="3"><label class="txt">Formatter</label> <br>
+            <input type="radio" name="5" value="4"><label class="txt">Console</label>
+
+            <br><br><br>
+            <input type="submit" value="Submit" id="finish">
+        </form>
+    </div>
+</body>
+</html>

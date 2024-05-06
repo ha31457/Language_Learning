@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main_style.css">
+    <link rel="stylesheet" href="dark_theme.css" id="theme">
+    <script>
+        questionNumbers = new Array(5);
+        for (let i = 0; i < questionNumbers.length; i++) {
+            questionNumbers[i] = i + 1;
+        }
+        function evaluateMarks() {
+            let score = 0;
+            const answers = [3, 2, 4, 1, 2]; // Array of correct answers
+            let radiobtns = document.querySelectorAll("input[type=radio]");
+            radiobtns.forEach(btn => {
+                let value = btn.value;
+                let name = btn.name;
+
+                for (let i = 0; i < questionNumbers.length; i++) {
+                    if (name == questionNumbers[i] && value == answers[i] && btn.checked) {
+                        score += 1;
+                    }
+                }
+            });
+            document.write(score);
+        }
+    </script>
+    <script src="script.js"></script>
+    <title>Java Functions Quiz</title>
+</head>
+<body>
+    <button id="manipulate">Turn White</button>
+    <h1 class="txt">Quick Quiz on Functions in Java</h1>
+    <hr size="10" class="seperator" , noshade="">
+    <br><br><br>
+    <div>
+        <form action="" onsubmit="evaluateMarks()">
+            <h3 class="txt">1. What is the return type of a function that does not return any value in Java?</h3>
+            <input type="radio" name="1" value="1"><label class="txt">int</label> <br>
+            <input type="radio" name="1" value="2"><label class="txt">void</label> <br>
+            <input type="radio" name="1" value="3"><label class="txt">double</label> <br>
+            <input type="radio" name="1" value="4"><label class="txt">String</label>
+
+            <br><br><br>
+            <h3 class="txt">2. Which keyword is used to define a function in Java?</h3>
+            <input type="radio" name="2" value="1"><label class="txt">method</label> <br>
+            <input type="radio" name="2" value="2"><label class="txt">define</label> <br>
+            <input type="radio" name="2" value="3"><label class="txt">function</label> <br>
+            <input type="radio" name="2" value="4"><label class="txt">void</label>
+
+            <br><br><br>
+            <h3 class="txt">3. In Java, which keyword is used to pass an argument by reference?</h3>
+            <input type="radio" name="3" value="1"><label class="txt">value</label> <br>
+            <input type="radio" name="3" value="2"><label class="txt">reference</label> <br>
+            <input type="radio" name="3" value="3"><label class="txt">this</label> <br>
+            <input type="radio" name="3" value="4"><label class="txt">final</label>
+
+            <br><br><br>
+            <h3 class="txt">4. Which keyword in Java is used to indicate that a function returns a value?</h3>
+            <input type="radio" name="4" value="1"><label class="txt">void</label> <br>
+            <input type="radio" name="4" value="2"><label class="txt">return</label> <br>
+            <input type="radio" name="4" value="3"><label class="txt">value</label> <br>
+            <input type="radio" name="4" value="4"><label class="txt">int</label>
+
+            <br><br><br>
+            <h3 class="txt">5. In Java, can a function be overloaded?</h3>
+            <input type="radio" name="5" value="1"><label class="txt">Yes</label> <br>
+            <input type="radio" name="5" value="2"><label class="txt">No</label> <br>
+            <input type="radio" name="5" value="3"><label class="txt">Maybe</label> <br>
+            <input type="radio" name="5" value="4"><label class="txt">Not sure</label>
+
+            <br><br><br>
+            <input type="submit" value="Submit" id="finish">
+        </form>
+    </div>
+</body>
+</html>
