@@ -5,6 +5,23 @@
     <link href="../css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+    <header>
+        <div class="logo">
+            <img src="geeksforgeeks_logo.png" alt="GeeksforGeeks Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">C++</a></li>
+                <li><a href="#">Java</a></li>
+                <li><button class="btn-login">Login</button></li>
+                <li><button class="btn-signup">Signup</button></li>
+            </ul>
+        </nav>
+        <div class="mode-switch">
+            <button onclick="toggleMode()">Toggle Mode</button>
+        </div>
+    </header>
     <h1> Strings in Java </h1>
     <p>In the given example only one object will be created. Firstly JVM will not find any string object with the value “Welcome” in the string constant pool, so it will create a new object. After that it will find the string with the value “Welcome” in the pool, it will not create a new object but will return the reference to the same instance. In this article, we will learn about Java Strings.</p>
     <h2> What are strings in java? </h2>

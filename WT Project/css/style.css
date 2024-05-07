@@ -47,3 +47,102 @@ td{
   color: black;
   font-weight: bold;
 }
+
+
+header {
+  background-color: #1F2833;
+  color: #66FCF1;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Vertically center align items */
+}
+
+.logo img {
+  height: 50px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center; /* Vertically center align items */
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li:last-child {
+  margin-right: 0; /* Remove right margin from the last li */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #66FCF1;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #0B0C10;
+}
+
+.right-links {
+  display: flex;
+  align-items: center; /* Vertically center align items */
+}
+
+.right-links button {
+  background-color: #2ECC71;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: 10px;
+}
+
+.right-links button:hover {
+  background-color: #27AE60;
+}
+
+.mode-switch button {
+  background-color: #3498DB;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.mode-switch button:hover {
+  background-color: #2980B9;
+}
+
+.btn-login,
+.btn-signup {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-login:hover,
+.btn-signup:hover {
+  background-color: #45a049;
+}
+
+.btn-signup {
+  background-color: #008CBA; /* Blue */
+}
+
+.btn-signup:hover {
+  background-color: #0073e6;
+}
