@@ -17,8 +17,9 @@
         answers[2] = 1;
         answers[3] = 4;
         answers[4] = 2;
+        let score = 0
         function evaluateMarks() {
-            score = 0
+            
             let radiobtns = document.querySelectorAll("input[type=radio]");
             radiobtns.forEach(btn => {
                 let value = btn.value;
@@ -30,17 +31,11 @@
                         score += 1;
                     }
                 }
-
-                // if(name == 1 && value == 2 && btn.checked){
-                //     score += 1;
-                // }
-                // if(name == 2 && value == 4 && btn.checked){
-                //     score += 1;
-                // }
             });
-            document.write(score);
+            // document.write(score);
+            document.cookie = "result=" + score;
         }
-
+        
     </script>
     <script src="script.js"></script>
     <title>C++ Arrays Quiz</title>
@@ -52,7 +47,7 @@
     <hr size="10" class="seperator" , noshade="">
     <br><br><br>
     <div>
-        <form action="" onsubmit="evaluateMarks()">
+        <form action="/WTphp/quiz/php/submit.php" method="POST" onsubmit="evaluateMarks()">
             <h3 class="txt">1. How is an array declared in C++?</h3>
             <input type="radio" name="1" value="1"><label class="txt">dataType arrayName[size];</label> <br>
             <input type="radio" name="1" value="2"><label class="txt">array dataType[size];</label> <br>
