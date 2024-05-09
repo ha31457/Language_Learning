@@ -16,8 +16,7 @@
                 <li><a href="/index.html">Home</a></li>
                 <li><a href="../WT Project/html/C++.html">C++</a></li>
                 <li><a href="../WT Project/html/java.html">Java</a></li>
-                <li><button class="btn-login"><a href="login.html">Login</a></button></li>
-                <li><button class="btn-signup"><a href="signup.html">Signup</a></button></li>
+                <li><button class="btn-login" id="acc"><a href="login.html">Account</a></button></li>
             </ul>
         </nav>
         <div class="mode-switch">
@@ -47,19 +46,11 @@
                     <p>Description of Course 2</p>
                     <a href="#">Enroll Now</a>
                 </div>
-                <div class="course">
-                    <img src="course3.jpg" alt="Course 3">
-                    <h3>Course 3</h3>
-                    <p>Description of Course 3</p>
-                    <a href="#">Enroll Now</a>
-                </div>
-                <!-- Add more courses as needed -->
             </div>
         </section>
 
         <section class="latest-articles">
             <h2>Latest Articles</h2>
-            <!-- Add latest articles here -->
         </section>
     </main>
 
@@ -68,6 +59,26 @@
     </footer>
 
     <script>
+        let allcookies = document.cookie;
+        let cookielist = allcookies.split(";");
+        let loggedin = false;
+        let accountBTN = document.getElementById('acc');
+
+        cookielist.forEach(cookie => {
+            name = cookie.split('=')[0];
+            value = cookie.split('=')[1];
+            if(name == "active" && value != ""){
+                loggedin = true;
+            }
+        });
+
+        if(!loggedin){
+            accountBTN.innerHTML = "<a href='login.html'>Login</a>"
+            }
+        else{
+            accountBTN.innerHTML = "<a href='profile.php'>Profile</a>"
+
+        }
         function toggleMode() {
             var element = document.body;
             element.classList.toggle("dark-mode");

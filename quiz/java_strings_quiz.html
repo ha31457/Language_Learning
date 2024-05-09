@@ -25,7 +25,8 @@
                     }
                 }
             });
-            document.write(score);
+            document.cookie = "result=" + score;
+            document.cookie = "quiz=javastr";
         }
     </script>
     <script src="script.js"></script>
@@ -33,12 +34,12 @@
 </head>
 
 <body>
-    <button id="manipulate">Turn White</button>
+    <button id="manipulate">Toggle Mode</button>
     <h1 class="txt">Quick Quiz on Java Strings</h1>
     <hr size="10" class="seperator" , noshade="">
     <br><br><br>
     <div>
-        <form action="" onsubmit="evaluateMarks()">
+        <form action="/language_learning/quiz/php/submit.php" method="POST" onsubmit="evaluateMarks()">
             <h3 class="txt">1. Which method is used to obtain the length of a string in Java?</h3>
             <input type="radio" name="1" value="1"><label class="txt">length()</label> <br>
             <input type="radio" name="1" value="2"><label class="txt">size()</label> <br>

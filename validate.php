@@ -19,14 +19,21 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
         echo $accusername;
         echo $accpwd;
 
-        $sql = "INSERT INTO `user credentials`(`username`, `password`, `cpparr`, `cppstr`, `cppfun`, `cppio`, `cppdata`, `cppoper`, `javaarr`, `javastr`, `javafun`, `javaio`, `javadata`, `javaoper`) VALUES ('$accusername','$accpwd',0,0,0,0,0,0,0,0,0,0,0,0)"; 
+        $sql = "SELECT * FROM `user credentials` WHERE `username`='$accusername'"; 
         $success = mysqli_query($conn, $sql);
         
         if($success){
-            echo "data entered: " . $accusername . " & " . $accpwd;
-            setcookie("active", $accusername, time() + 86400, "/");
-            header("Location: /language_learning/");
-            exit;
+            $num = mysqli_num_rows($success);
+            echo $num;
+
+            if($num>0){
+                $row = mysqli_fetch_assoc($success);
+                if($row['password'] == $accpwd){
+                    setcookie("active", $accusername, time() + 86400, "/");
+                    header("Location: /language_learning/");
+                    exit;
+                }
+            }
         }
         else{
             echo "hello";

@@ -12,7 +12,7 @@
         }
         function evaluateMarks() {
             let score = 0;
-            const answers = [4, 3, 2, 1, 3]; // Array of correct answers
+            const answers = [3, 3, 3, 1, 3]; // Array of correct answers
             let radiobtns = document.querySelectorAll("input[type=radio]");
             radiobtns.forEach(btn => {
                 let value = btn.value;
@@ -24,19 +24,20 @@
                     }
                 }
             });
-            document.write(score);
+            document.cookie = "result=" + score;
+            document.cookie = "quiz=javaoper";
         }
     </script>
     <script src="script.js"></script>
     <title>Java Operators Quiz</title>
 </head>
 <body>
-    <button id="manipulate">Turn White</button>
+    <button id="manipulate">Toggle Mode</button>
     <h1 class="txt">Quick Quiz on Operators in Java</h1>
     <hr size="10" class="seperator" , noshade="">
     <br><br><br>
     <div>
-        <form action="" onsubmit="evaluateMarks()">
+        <form action="/language_learning/quiz/php/submit.php" method="POST" onsubmit="evaluateMarks()">
             <h3 class="txt">1. Which operator in Java is used to perform addition?</h3>
             <input type="radio" name="1" value="1"><label class="txt">-</label> <br>
             <input type="radio" name="1" value="2"><label class="txt">*</label> <br>

@@ -32,8 +32,8 @@
                     }
                 }
             });
-            // document.write(score);
             document.cookie = "result=" + score;
+            document.cookie = "quiz=cpparr";
         }
         
     </script>
@@ -42,12 +42,12 @@
 </head>
 
 <body>
-    <button id="manipulate">Turn White</button>
+    <button id="manipulate">Toggle Mode</button>
     <h1 class="txt">Quick Quiz on C++ Arrays</h1>
     <hr size="10" class="seperator" , noshade="">
     <br><br><br>
     <div>
-        <form action="/WTphp/quiz/php/submit.php" method="POST" onsubmit="evaluateMarks()">
+        <form action="/language_learning/quiz/php/submit.php" method="POST" onsubmit="evaluateMarks()">
             <h3 class="txt">1. How is an array declared in C++?</h3>
             <input type="radio" name="1" value="1"><label class="txt">dataType arrayName[size];</label> <br>
             <input type="radio" name="1" value="2"><label class="txt">array dataType[size];</label> <br>

@@ -30,15 +30,9 @@
                         score += 1;
                     }
                 }
-
-                // if(name == 1 && value == 2 && btn.checked){
-                //     score += 1;
-                // }
-                // if(name == 2 && value == 4 && btn.checked){
-                //     score += 1;
-                // }
             });
-            document.write(score);
+            document.cookie = "result=" + score;
+            document.cookie = "quiz=cppfun";
         }
 
     </script>
@@ -47,12 +41,12 @@
 </head>
 
 <body>
-    <button id="manipulate">Turn White</button>
+    <button id="manipulate">Toggle Mode</button>
     <h1 class="txt">Quick Quiz on C++ Functions</h1>
     <hr size="10" class="seperator" , noshade="">
     <br><br><br>
     <div>
-        <form action="" onsubmit="evaluateMarks()">
+        <form action="/language_learning/quiz/php/submit.php" method="POST" onsubmit="evaluateMarks()">
             <h3 class="txt">1. What are  mandatory parts in the function declaration in C++?</h3>
             <input type="radio" name="1" value="1"><label class="txt">return type, function name</label> <br>
             <input type="radio" name="1" value="2"><label class="txt">return type, function name, parameters</label> <br>

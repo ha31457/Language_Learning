@@ -6,7 +6,7 @@ function change(css_file){
     theme.setAttribute('href',css_file)
 }
 
-window.onload = function () {
+window.onload = function () {zzzz
     document.getElementById("manipulate").addEventListener('click', function () {
         if(state == 'light'){
             change('dark_theme.css');
