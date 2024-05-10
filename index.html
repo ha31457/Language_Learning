@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GeeksforGeeks</title>
+    <title>H&H Learning</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="../WT Project/images/logo.png" alt="H&H Logo">
+            <img src="/language_learning/logo.png" alt="H&H Logo">
         </div>
         <nav>
             <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="../WT Project/html/C++.html">C++</a></li>
-                <li><a href="../WT Project/html/java.html">Java</a></li>
+                <li><a href="/language_learning/">Home</a></li>
+                <li><a href="WT Project/html/C++.html">C++</a></li>
+                <li><a href="WT Project/html/java.html">Java</a></li>
                 <li><button class="btn-login" id="acc"><a href="login.html">Account</a></button></li>
             </ul>
         </nav>
@@ -35,54 +35,24 @@
             <h2>Featured Courses</h2>
             <div class="course-container">
                 <div class="course">
-                    <img src="../WT Project/images/CTutorial.png" alt="Course 1">
+                    <img src="WT Project/images/CTutorial.png" alt="Course 1">
                     <h3>C++ course</h3>
                     <p>This course teaches C++.</p>
-                    <a href="../WT Project/html/C++.html">Enroll Now</a>
+                    <a href="WT Project/html/C++.html">Enroll Now</a>
                 </div>
                 <div class="course">
-                    <img src="../Wt Project/images/java.png" alt="Course 2">
+                    <img src="Wt Project/images/java.png" alt="Course 2">
                     <h3>Java Course</h3>
                     <p>This course teaches Java</p>
-                    <a href="../WT Project/html/java.html">Enroll Now</a>
+                    <a href="WT Project/html/java.html">Enroll Now</a>
                 </div>
             </div>
-        </section>
-
-        <section class="latest-articles">
-            <h2>Latest Articles</h2>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2024 H&H Learning. All rights reserved.</p>
     </footer>
-
-    <script>
-        let allcookies = document.cookie;
-        let cookielist = allcookies.split(";");
-        let loggedin = false;
-        let accountBTN = document.getElementById('acc');
-
-        cookielist.forEach(cookie => {
-            name = cookie.split('=')[0];
-            value = cookie.split('=')[1];
-            if(name == "active" && value != ""){
-                loggedin = true;
-            }
-        });
-
-        if(!loggedin){
-            accountBTN.innerHTML = "<a href='login.html'>Login</a>"
-            }
-        else{
-            accountBTN.innerHTML = "<a href='profile.php'>Profile</a>"
-
-        }
-        function toggleMode() {
-            var element = document.body;
-            element.classList.toggle("dark-mode");
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

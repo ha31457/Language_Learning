@@ -121,8 +121,7 @@ nav ul li a:hover {
   background-color: #2980B9;
 }
 
-.btn-login,
-.btn-signup {
+.btn-login, .btn-login a {
   background-color: #4CAF50; /* Green */
   border: none;
   color: white;
@@ -134,15 +133,13 @@ nav ul li a:hover {
   cursor: pointer;
 }
 
-.btn-login:hover,
-.btn-signup:hover {
-  background-color: #45a049;
+.btn-login a:hover{
+  background-color: #4CAF50; /* Green */
+
 }
 
-.btn-signup {
-  background-color: #008CBA; /* Blue */
-}
-
-.btn-signup:hover {
-  background-color: #0073e6;
+.dark-mode {
+  background-color: #C5C6C7;
+  
+  color: #0B0C10;
 }

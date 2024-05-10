@@ -32,3 +32,28 @@ function logout(){
         }
     })
 }
+
+let allcookies = document.cookie;
+let cookielist = allcookies.split(";");
+let loggedin = false;
+let accountBTN = document.getElementById('acc');
+
+cookielist.forEach(cookie => {
+    name = cookie.split('=')[0];
+    value = cookie.split('=')[1];
+    if(name == "active" && value != ""){
+        loggedin = true;
+    }
+});
+
+if(!loggedin){
+    accountBTN.innerHTML = "<a href='/language_learning/login.html' style='text-decoration:none; color: white; padding: 10px;'>Login</a>"
+    }
+else{
+    accountBTN.innerHTML = "<a href='/language_learning/profile.php' style='text-decoration:none; color: white; padding: 10px;'>Profile</a>"
+
+}
+function toggleMode() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+}
