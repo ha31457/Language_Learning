@@ -2,6 +2,8 @@
 if($_SERVER['REQUEST_METHOD'] == "POST"){
     $accusername = $_POST['username'];
     $accpwd = $_POST['password'];
+    $accemail = $_POST['email'];
+    $accgender = $_POST['gender'];
 
 
     $servername = "localhost";
@@ -14,7 +16,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
         echo "Error 500";
     }
     else{   
-        $sql = "INSERT INTO `user credentials`(`username`, `password`, `cpparr`, `cppstr`, `cppfun`, `cppio`, `cppdata`, `cppoper`, `javaarr`, `javastr`, `javafun`, `javaio`, `javadata`, `javaoper`) VALUES ('$accusername','$accpwd',0,0,0,0,0,0,0,0,0,0,0,0)"; 
+        $sql = "INSERT INTO `user credentials`(`username`, `password`, `gender`, `email`, `cpparr`, `cppstr`, `cppfun`, `cppio`, `cppdata`, `cppoper`, `javaarr`, `javastr`, `javafun`, `javaio`, `javadata`, `javaoper`) VALUES ('$accusername','$accpwd','$accgender','$accemail',0,0,0,0,0,0,0,0,0,0,0,0)"; 
         try {
             $success = mysqli_query($conn, $sql);
             if($success){

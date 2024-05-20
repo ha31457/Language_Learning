@@ -84,7 +84,8 @@ if($conn){
         <div class="container">
             <h1>User Profile</h1>
             <p><strong>Username:</strong> '.$row['username'].'</p>
-            <p><strong>Gender:</strong> Male</p>
+            <p><strong>Gender:</strong> '.$row['gender'].'</p>
+            <p><strong>Email ID:</strong> '.$row['email'].'</p>
             <table>
                 <tr>
                     <th>Quiz</th>
